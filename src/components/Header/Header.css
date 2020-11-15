@@ -1,0 +1,13 @@
+#header {
+    padding: 0.6rem 2rem;
+}
+
+#header ul {
+    padding: 0;
+    margin:0;
+} 
+#header ul>li {
+    list-style-type: none;
+    display: inline;
+    margin: 0 1rem;
+}
