@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export const PageNotFound = () => {
-    let {
+    const {
         state: { from },
     } = useLocation<{ from: Location }>();
 
