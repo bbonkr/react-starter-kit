@@ -19,13 +19,14 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 use: [
-                    !isProduction && {
+                    {
                         loader: 'babel-loader',
                         options: {
-                            plugins: ['react-refresh/babel'],
+                            plugins: [
+                                !isProduction && 'react-refresh/babel',
+                            ].filter(Boolean),
                         },
                     },
-                    'ts-loader',
                 ].filter(Boolean),
                 exclude: /node_modules/,
             },

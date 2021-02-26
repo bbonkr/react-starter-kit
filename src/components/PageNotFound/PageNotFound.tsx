@@ -1,10 +1,15 @@
 import React from 'react';
+import { Location } from 'history';
 import { Link, useLocation } from 'react-router-dom';
+
+interface LocationState {
+    from: Location;
+}
 
 export const PageNotFound = () => {
     const {
         state: { from },
-    } = useLocation<{ from: Location }>();
+    } = useLocation<LocationState>();
 
     return (
         <div>
