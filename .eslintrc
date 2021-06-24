@@ -36,13 +36,17 @@
                 "sourceType": "module"
             },
             "extends": [
+                "plugin:react-hooks/recommended",
                 "plugin:react/recommended",
                 "plugin:@typescript-eslint/recommended"
             ],
             "plugins": [
                 "react",
                 "@typescript-eslint"
-            ]
+            ],
+            "rules": {
+                "react/prop-types": "off"
+            }
         }
     ]
 }
