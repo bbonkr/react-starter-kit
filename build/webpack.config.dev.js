@@ -15,6 +15,10 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new ReactRefreshPlugin(),
     ],
+    output: {
+        ...baseConfig.output,
+        clean: false,
+    },
     devServer: {
         port: 3000,
         host: '0.0.0.0',
