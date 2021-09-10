@@ -3,27 +3,18 @@
         "es2021": true,
         "node": true
     },
-    "extends": [
-        "eslint:recommended",   
-        "plugin:prettier/recommended"
-    ],
-   
-    "plugins": [
-        "prettier"
-    ],
+    "extends": ["eslint:recommended", "plugin:prettier/recommended"],
     "settings": {
-        "react":{
-            "version":"detect"
+        "react": {
+            "version": "detect"
         }
     },
     "rules": {
-        "prettier/prettier": [
-            "error"
-        ]
+        "prettier/prettier": ["error"]
     },
     "overrides": [
         {
-            "files":["*.ts", "*.tsx"],
+            "files": ["*.ts", "*.tsx"],
             "env": {
                 "browser": true
             },
@@ -40,12 +31,10 @@
                 "plugin:react/recommended",
                 "plugin:@typescript-eslint/recommended"
             ],
-            "plugins": [
-                "react",
-                "@typescript-eslint"
-            ],
+            "plugins": ["react", "@typescript-eslint"],
             "rules": {
-                "react/prop-types": "off"
+                "react/prop-types": "off",
+                "@typescript-eslint/explicit-module-boundary-types": "off"
             }
         }
     ]
