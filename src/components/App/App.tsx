@@ -1,29 +1,32 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
     Redirect,
 } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { AsyncComponent, LoadingComponent } from '../AsyncComponent';
+import { appSettings } from '../../appSettings';
+
+import './App.css';
 
 const Header = AsyncComponent(() => import('../Header'), {
     resolveComponent: (props) => props.Header,
     fallback: <LoadingComponent />,
 });
 
-const Home = AsyncComponent(() => import('../Home'), {
+const Home = AsyncComponent(() => import('../../pages/Home'), {
     resolveComponent: (props) => props.Home,
     fallback: <LoadingComponent />,
 });
 
-const About = AsyncComponent(() => import('../About'), {
+const About = AsyncComponent(() => import('../../pages/About'), {
     resolveComponent: (props) => props.About,
     fallback: <LoadingComponent />,
 });
 
-const PageNotFound = AsyncComponent(() => import('../PageNotFound'), {
+const PageNotFound = AsyncComponent(() => import('../../pages/PageNotFound'), {
     resolveComponent: (props) => props.PageNotFound,
     fallback: <LoadingComponent />,
 });
@@ -35,6 +38,10 @@ export const App = () => {
         <HelmetProvider context={helmetContext}>
             <Router>
                 <Header />
+                <Helmet
+                    defaultTitle={appSettings.title}
+                    titleTemplate={`%s : ${appSettings.title}`}
+                />
                 <Switch>
                     <Route path="/" exact>
                         <Home />

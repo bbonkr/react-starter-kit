@@ -1,17 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { LoadingComponent } from '../AsyncComponent';
+import { PageContainer } from '../../components/Layouts';
 
 export const Home = () => {
     return (
         <React.Fragment>
             <Helmet>
-                <title>Home - React Starter Kit</title>
+                <title>Home</title>
             </Helmet>
-            <div>
+            <PageContainer id="home">
                 <h1>Hello World</h1>
                 <p>React Starter Kit</p>
-            </div>
+            </PageContainer>
         </React.Fragment>
     );
 };

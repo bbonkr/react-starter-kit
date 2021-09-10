@@ -1,16 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { PageContainer } from '../../components/Layouts';
 
 export const About = () => {
     return (
         <React.Fragment>
             <Helmet>
-                <title>About - React Starter Kit</title>
+                <title>About</title>
             </Helmet>
-            <div>
+            <PageContainer id="about">
                 <h1>About</h1>
                 <p>React Starter Kit</p>
-            </div>
+            </PageContainer>
         </React.Fragment>
     );
 };
