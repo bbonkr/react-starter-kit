@@ -9,9 +9,7 @@ interface LocationState {
 }
 
 export const PageNotFound = () => {
-    const {
-        state: { from },
-    } = useLocation<LocationState>();
+    const { state } = useLocation<LocationState>();
 
     return (
         <React.Fragment>
@@ -19,9 +17,12 @@ export const PageNotFound = () => {
 
             <PageContainer id="page-not-found">
                 <h1>404 | Page not found</h1>
-                <p>
-                    <code>{from.pathname}</code> does not exist.
-                </p>
+                {state?.from && (
+                    <p>
+                        <code>{state?.from.pathname}</code> does not exist.
+                    </p>
+                )}
+
                 <p>
                     <Link to="/">Go to Home</Link>
                 </p>
