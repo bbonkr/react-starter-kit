@@ -38,5 +38,5 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./out
-          tag_name: ${{ github.ref_name }}
-          tag_message: 'Deployment ${{ github.ref_name }}'
+          # tag_name: ${{ github.ref_name }} # DO NOT CREATE GIT TAG
+          # tag_message: 'Deployment ${{ github.ref_name }}' # DO NOT CREATE GIT TAG
