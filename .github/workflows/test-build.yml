@@ -1,11 +1,11 @@
-name: Build and tag
+name: Verify to Build 
 
 on:
   pull_request:
 
 jobs:
-  build:
-    name: build
+  verify-build:
+    name: Verify to build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
