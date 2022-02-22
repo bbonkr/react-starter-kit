@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-    HashRouter as Router,
-    Switch,
-    Route,
-    Redirect,
-} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { AsyncComponent, LoadingComponent } from '../AsyncComponent';
 import { appSettings } from '../../appSettings';
@@ -42,28 +37,12 @@ export const App = () => {
                     defaultTitle={appSettings.title}
                     titleTemplate={`%s : ${appSettings.title}`}
                 />
-                <Switch>
-                    <Route path="/" exact>
-                        <Home />
-                    </Route>
-                    <Route path="/about" exact>
-                        <About />
-                    </Route>
-                    <Route path="/404" exact>
-                        <PageNotFound />
-                    </Route>
-                    <Route
-                        path="*"
-                        render={(props) => (
-                            <Redirect
-                                to={{
-                                    pathname: '/404',
-                                    state: { from: props.location },
-                                }}
-                            />
-                        )}
-                    ></Route>
-                </Switch>
+
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="*" element={<PageNotFound />} />
+                </Routes>
             </Router>
         </HelmetProvider>
     );
