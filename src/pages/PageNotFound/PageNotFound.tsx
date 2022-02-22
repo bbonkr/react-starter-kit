@@ -1,15 +1,10 @@
 import React from 'react';
-import { Location } from 'history';
 import { Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { PageContainer } from '../../components/Layouts';
 
-interface LocationState {
-    from: Location;
-}
-
 export const PageNotFound = () => {
-    const { state } = useLocation<LocationState>();
+    const location = useLocation();
 
     return (
         <React.Fragment>
@@ -17,9 +12,9 @@ export const PageNotFound = () => {
 
             <PageContainer id="page-not-found">
                 <h1>404 | Page not found</h1>
-                {state?.from && (
+                {location.pathname && (
                     <p>
-                        <code>{state?.from.pathname}</code> does not exist.
+                        <code>{location.pathname}</code> does not exist.
                     </p>
                 )}
 
