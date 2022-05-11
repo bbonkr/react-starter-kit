@@ -33,7 +33,7 @@
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-helmet-async": "^1.2.3",
-        "react-router-dom": "^6.2.2"
+        "react-router-dom": "^6.3.0"
     },
     "devDependencies": {
         "@babel/core": "^7.17.5",
@@ -53,10 +53,10 @@
         "copy-webpack-plugin": "^10.2.4",
         "cross-env": "^7.0.3",
         "css-loader": "^6.7.1",
-        "eslint": "^8.10.0",
+        "eslint": "^8.15.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-prettier": "^4.0.0",
-        "eslint-plugin-react": "^7.29.3",
+        "eslint-plugin-react": "^7.29.4",
         "eslint-plugin-react-hooks": "^4.3.0",
         "html-webpack-plugin": "^5.5.0",
         "npm-check": "^5.9.2",
