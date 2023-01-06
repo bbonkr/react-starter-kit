@@ -9,9 +9,7 @@
         "build:dev": "webpack --config build/webpack.config.dev.js",
         "build:prod": "webpack --config build/webpack.config.js",
         "build": "cross-env NODE_ENV=production npm run build:prod",
-        "lint": "eslint --ext .ts,.tsx src/ --quiet --fix",
-        "check": "npm-check",
-        "check:update": "npm-check -u"
+        "lint": "eslint --ext .ts,.tsx src/ --quiet --fix"
     },
     "repository": {
         "type": "git",
@@ -59,7 +57,6 @@
         "eslint-plugin-react": "^7.30.0",
         "eslint-plugin-react-hooks": "^4.5.0",
         "html-webpack-plugin": "^5.5.0",
-        "npm-check": "^5.9.2",
         "prettier": "^2.6.2",
         "react-refresh": "^0.13.0",
         "style-loader": "^3.3.1",
